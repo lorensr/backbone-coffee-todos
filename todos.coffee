@@ -62,7 +62,7 @@ $ ->
     render: =>
       $(@el).html @template @model.toJSON()
       $(@el).toggleClass 'done', @model.get 'done'
-      @input = @.$('.edit');
+      @input = @$('.edit');
       @
 
     toggleDone: ->
