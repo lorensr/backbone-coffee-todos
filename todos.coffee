@@ -98,14 +98,14 @@ $ ->
       'click #toggle-all': 'toggleAllComplete'
 
     initialize: ->
-      @input = $ '#new-todo'
-      @allCheckbox = $('#toggle-all')[0]
+      @input = @$ '#new-todo'
+      @allCheckbox = @$('#toggle-all')[0]
 
       Todos.bind 'add', @addOne
       Todos.bind 'reset', @addAll
       Todos.bind 'all', @render
 
-      @footer = $ 'footer'
+      @footer = @$ 'footer'
       @main = $ '#main'
 
       Todos.fetch()
@@ -126,7 +126,7 @@ $ ->
 
     addOne: (todo) =>
       view = new TodoView model: todo
-      $('#todo-list').append view.render().el
+      @$('#todo-list').append view.render().el
 
     addAll: =>
       Todos.each @addOne
