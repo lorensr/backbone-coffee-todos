@@ -88,7 +88,7 @@ $ ->
 
   class AppView extends Backbone.View
 
-    el: $("#todoapp")
+    el: $ '#todoapp'
 
     statsTemplate: _.template $('#stats-template').html()
 
